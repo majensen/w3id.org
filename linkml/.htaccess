@@ -39,6 +39,7 @@ RewriteRule ^(.*[^/])$ $1.shex [L]
 RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]+$
 RewriteCond %{REQUEST_URI} !/docs/
 RewriteCond %{HTTP_ACCEPT} ^text/html
+RewriteRule ^meta[/](.*)$ docs/$1 [L]
 RewriteRule ^(.*[^/])$ docs/$1 [L]
 
 # TODO: Look at how to apply the profile from https://w3c.github.io/json-ld-syntax/#dfn-context-document
